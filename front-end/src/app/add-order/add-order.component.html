@@ -1,0 +1,35 @@
+<div *ngIf="token !== null">
+    <form [formGroup]="registrationForm" (ngSubmit)="submitAction()" class="form-group">
+        <label for="power">
+            Name:
+            <input type="text" name="name" formControlName="name">
+        </label>
+        <label for="power">
+            Link Here:
+            <input type="text" name="link" formControlName="link">
+        </label>
+        <label for="power">
+            Price:
+            <input type="text" name="name" formControlName="price">
+        </label>
+        <br />
+        <br />
+        <label for="power">
+            Description:
+            <input type="text" name="name" formControlName="description">
+        </label>
+        <label for="power">
+            Color:
+            <input type="text" name="name" formControlName="color">
+        </label>
+        <label for="power">
+            Priority:
+            <select name="priority" id="priority_select" formControlName="priority">
+                <option value="1">Option 1</option>
+                <option value="2">Option 1</option>
+                <option value="3">Option 1</option>
+            </select>
+        </label>
+        <button type="submit">Add product</button>
+    </form>
+</div>

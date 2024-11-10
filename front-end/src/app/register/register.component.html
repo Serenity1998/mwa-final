@@ -1,0 +1,14 @@
+<div style="margin-top: 20px; display: flex; justify-content: left;">
+    <form [formGroup]="registerForm" (ngSubmit)="submitAction()"
+        style="margin-top: 20px; display: flex; flex-direction: column; gap: 1rem">
+        <label for="username">
+            Username:
+        </label>
+        <input type="text" name="username" formControlName="username">
+        <label for="password">
+            Password:
+        </label>
+        <input type="password" name="password" formControlName="password">
+        <button type="submit">Register</button>
+    </form>
+</div>

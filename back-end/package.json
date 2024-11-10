@@ -1,0 +1,23 @@
+{
+  "name": "pinduoduo_wishlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-front-end": "cd ./front-end && npm start",
+    "start": "node --watch index.js && npm run start-front-end"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.6",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1"
+  }
+}

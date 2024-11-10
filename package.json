@@ -1,0 +1,17 @@
+{
+  "name": "retailer_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-backend": "cd ./back-end && npm start",
+    "start-frontend": "cd ./front-end && npm start",
+    "start": "npm run start-backend | npm run start-frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

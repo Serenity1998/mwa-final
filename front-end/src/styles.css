@@ -1,0 +1,10 @@
+.order_history-wrapper {
+  display: flex;
+  margin-top: 40px;
+}
+.right_items-wrapper {
+  flex: 1;
+}
+.left_items-wrapper {
+  flex: 1;
+}

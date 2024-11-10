@@ -1,0 +1,24 @@
+<nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/add-order">New Order</a>
+    <a *ngIf="token === null || token === undefined" routerLink="/register">Register</a>
+    <div *ngIf="token === null || token === undefined; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+        <form [formGroup]="loginForm" (ngSubmit)="submitAction()" class="form_wrapper">
+            <label for="username">
+                Username:
+            </label>
+            <input type="text" name="username" formControlName="username">
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" name="password" formControlName="password">
+            <button type="submit">Login</button>
+        </form>
+    </ng-template>
+    <ng-template #elseBlock class="form_wrapper">
+        <div class="form_wrapper">
+            <button (click)="logoutAction()" type="submit">Logout</button>
+        </div>
+    </ng-template>
+</nav>

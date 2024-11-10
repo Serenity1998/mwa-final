@@ -1,0 +1,34 @@
+<div *ngIf="token !== null">
+    <h1> {{title | order}}</h1>
+    <h2>To view detail click one of this</h2>
+    <div class="order_history-wrapper">
+        <div class="right_items-wrapper">
+            <div *ngFor="let order of data">
+                <div (click)="fetchLeftItems(order._id)">{{ "Order ID:" | uppercase }} {{order.order_num}}</div>
+            </div>
+        </div>
+        <div class="left_items-wrapper">
+            <div *ngFor="let hero of leftItems">
+                <a routerLink="/detail/{{hero.id}}/{{hero._id}}">{{hero.name}}</a>
+            </div>
+        </div>
+    </div>
+
+    <h2 style="margin-top: 40px;">Current order details</h2>
+    <div style="display: flex;">
+        <p>Your list of items: <b></b></p> <br />
+    </div>
+
+    <div *ngFor="let item of current?.order_items">
+        <div style="margin-bottom: 8px;">
+            {{item.name}}
+            <b>{{item.is_checked ? "MARKED" : ""}}</b>
+            <button (click)="markItem(item._id)" style="margin-left:20px">Mark this item</button>
+        </div>
+    </div>
+
+    <div *ngIf="current !== undefined && current !== null" style="margin-top: 60px;">
+        <button *ngIf="current.order_items.length > 0" (click)="finish()" style="margin-left:20px; padding: 6px">Finish
+            order</button>
+    </div>
+</div>
